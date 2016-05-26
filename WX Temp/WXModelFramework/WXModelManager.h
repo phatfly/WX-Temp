@@ -51,6 +51,10 @@ extern NSString *const kWXSDKNetworkReachabilityChanged;
  *
  *  @see https://www.wunderground.com/weather/api/d/docs?d=data/index
  *
+ *  @param queryString
+ *  This query string can be any of the options they allow for query in their API.
+ *
+ *  @discussion
  *  The completion block will "return"
  *  success if there were no errors while handling the method.
  *  conditionResponseDict with the wunderground JSON response to their API call.

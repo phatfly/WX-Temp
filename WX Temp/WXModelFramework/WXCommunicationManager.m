@@ -371,6 +371,7 @@ static WXCommunicationManager *sharedCommManager = nil;
         NSURLSessionDataTask *task = [backgroundSession dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response, NSError *error) {
         
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            
             if (error)
             {
                 DebugLogWX(@"\n error ------ %@", [error localizedDescription]);
