@@ -21,10 +21,6 @@ static WXCommunicationManager *sharedCommManager = nil;
 @property (nonatomic, getter = isWifiReachable) BOOL wifiReachable;
 @property (nonatomic, getter = isWwanReachable) BOOL wwanReachable;
 
-@property (nonatomic, strong) NSUserDefaults *prefs;
-
-@property BOOL serverFirstConnected;
-
 @property (nonatomic, strong) NSTimer *serverAvailabilityTimer;
 
 @property (nonatomic, strong) Reachability *reachability;
@@ -35,7 +31,7 @@ static WXCommunicationManager *sharedCommManager = nil;
 
 @implementation WXCommunicationManager
 
-@synthesize prefs, reachability, isOfflineMode, wwanReachable, wifiReachable, backgroundSession, backgroundConfigurationObject, serverFirstConnected, serverAvailabilityTimer;
+@synthesize reachability, isOfflineMode, wwanReachable, wifiReachable, backgroundSession, backgroundConfigurationObject, serverAvailabilityTimer;
 
 
 #pragma mark Singleton Methods
@@ -70,9 +66,6 @@ static WXCommunicationManager *sharedCommManager = nil;
     if (self) {
         //initializations
   
-        prefs = [NSUserDefaults standardUserDefaults];
-        
-      
         backgroundConfigurationObject = [NSURLSessionConfiguration defaultSessionConfiguration ];
         
         backgroundConfigurationObject.HTTPMaximumConnectionsPerHost = 5;
@@ -89,8 +82,6 @@ static WXCommunicationManager *sharedCommManager = nil;
         
         [self firstReachabilityCheck];
         [self startNotifyingOfInternetChanges];
-        
-        
     }
     
     return self;
@@ -318,7 +309,6 @@ static WXCommunicationManager *sharedCommManager = nil;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:kWXSDKReachabilityChanged object:nil];
-            
         });
         
         
@@ -344,10 +334,6 @@ static WXCommunicationManager *sharedCommManager = nil;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:kWXSDKReachabilityChanged object:nil];
-        
-        if(!serverFirstConnected)
-            serverFirstConnected = YES;
-        
     });
     
     if (serverAvailabilityTimer)
@@ -370,11 +356,9 @@ static WXCommunicationManager *sharedCommManager = nil;
 
 -(void)readConditionForLocation:(NSString*)locationQuery completion:(void (^)(BOOL success, NSDictionary *jsonResult, NSError *localError))completionHandler
 {
-  
     DebugLogWX(@"locationQuery: %@", locationQuery);
     
     NSURL *url = [[NSURL alloc] initWithString:[WXCommunicationManager getWebServiceURLWithQueryType:locationQuery]];
-    
 
     NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"GET"];
@@ -387,14 +371,14 @@ static WXCommunicationManager *sharedCommManager = nil;
         NSURLSessionDataTask *task = [backgroundSession dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response, NSError *error) {
         
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            if (error) {
+            if (error)
+            {
                 DebugLogWX(@"\n error ------ %@", [error localizedDescription]);
                 completionHandler(NO, @{@"error":[error localizedDescription]},error);
                 [self errorCheckingReachability:error];
             }
             else
             {
-                
                 NSError *localError = nil;
                 NSMutableDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingAllowFragments error:&localError];
                 
@@ -404,13 +388,9 @@ static WXCommunicationManager *sharedCommManager = nil;
                     DebugLogWX(@"localError: %@", localError);
                     return;
                 }
-                
                 completionHandler(YES, parsedObject, nil);
-                
             }
-            
         }];
-        
         [task resume];
     }
     else
