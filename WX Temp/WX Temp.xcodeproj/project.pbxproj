@@ -1,0 +1,854 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		262ADD151CF5F00200E9DFBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD141CF5F00200E9DFBA /* main.m */; };
+		262ADD181CF5F00200E9DFBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD171CF5F00200E9DFBA /* AppDelegate.m */; };
+		262ADD1E1CF5F00200E9DFBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262ADD1C1CF5F00200E9DFBA /* Main.storyboard */; };
+		262ADD201CF5F00200E9DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262ADD1F1CF5F00200E9DFBA /* Assets.xcassets */; };
+		262ADD231CF5F00200E9DFBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262ADD211CF5F00200E9DFBA /* LaunchScreen.storyboard */; };
+		262ADD2E1CF5F00200E9DFBA /* WX_TempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD2D1CF5F00200E9DFBA /* WX_TempTests.m */; };
+		262ADD391CF5F00200E9DFBA /* WX_TempUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD381CF5F00200E9DFBA /* WX_TempUITests.m */; };
+		262ADD491CF5FBAA00E9DFBA /* WXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD481CF5FBAA00E9DFBA /* WXMainViewController.m */; };
+		262ADD4D1CF6031800E9DFBA /* WXShowTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD4C1CF6031800E9DFBA /* WXShowTempViewController.m */; };
+		262ADD561CF6046100E9DFBA /* WXModelFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 262ADD551CF6046100E9DFBA /* WXModelFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		262ADD5D1CF6046100E9DFBA /* WXModelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262ADD531CF6046000E9DFBA /* WXModelFramework.framework */; };
+		262ADD641CF6046100E9DFBA /* WXModelFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD631CF6046100E9DFBA /* WXModelFrameworkTests.m */; };
+		262ADD681CF6046100E9DFBA /* WXModelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262ADD531CF6046000E9DFBA /* WXModelFramework.framework */; };
+		262ADD691CF6046100E9DFBA /* WXModelFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 262ADD531CF6046000E9DFBA /* WXModelFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		262ADD741CF6050900E9DFBA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD721CF6050900E9DFBA /* Reachability.m */; };
+		262ADD751CF6050900E9DFBA /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 262ADD731CF6050900E9DFBA /* Reachability.h */; };
+		262ADD791CF6055900E9DFBA /* WXCommunicationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 262ADD771CF6055900E9DFBA /* WXCommunicationManager.h */; };
+		262ADD7A1CF6055900E9DFBA /* WXCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD781CF6055900E9DFBA /* WXCommunicationManager.m */; };
+		262ADD7C1CF60CCF00E9DFBA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262ADD7B1CF60CCF00E9DFBA /* CoreLocation.framework */; };
+		262ADD7F1CF60CFF00E9DFBA /* WXModelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 262ADD7D1CF60CFF00E9DFBA /* WXModelManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		262ADD801CF60CFF00E9DFBA /* WXModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 262ADD7E1CF60CFF00E9DFBA /* WXModelManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		262ADD2A1CF5F00200E9DFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262ADD081CF5F00200E9DFBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262ADD0F1CF5F00200E9DFBA;
+			remoteInfo = "WX Temp";
+		};
+		262ADD351CF5F00200E9DFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262ADD081CF5F00200E9DFBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262ADD0F1CF5F00200E9DFBA;
+			remoteInfo = "WX Temp";
+		};
+		262ADD5E1CF6046100E9DFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262ADD081CF5F00200E9DFBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262ADD521CF6046000E9DFBA;
+			remoteInfo = WXModelFramework;
+		};
+		262ADD601CF6046100E9DFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262ADD081CF5F00200E9DFBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262ADD0F1CF5F00200E9DFBA;
+			remoteInfo = "WX Temp";
+		};
+		262ADD661CF6046100E9DFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262ADD081CF5F00200E9DFBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262ADD521CF6046000E9DFBA;
+			remoteInfo = WXModelFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		262ADD6D1CF6046100E9DFBA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				262ADD691CF6046100E9DFBA /* WXModelFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		262ADD101CF5F00200E9DFBA /* WX Temp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WX Temp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		262ADD141CF5F00200E9DFBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		262ADD161CF5F00200E9DFBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		262ADD171CF5F00200E9DFBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		262ADD1D1CF5F00200E9DFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		262ADD1F1CF5F00200E9DFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		262ADD221CF5F00200E9DFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		262ADD241CF5F00200E9DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262ADD291CF5F00200E9DFBA /* WX TempTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WX TempTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		262ADD2D1CF5F00200E9DFBA /* WX_TempTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WX_TempTests.m; sourceTree = "<group>"; };
+		262ADD2F1CF5F00200E9DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262ADD341CF5F00200E9DFBA /* WX TempUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WX TempUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		262ADD381CF5F00200E9DFBA /* WX_TempUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WX_TempUITests.m; sourceTree = "<group>"; };
+		262ADD3A1CF5F00200E9DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262ADD471CF5FBAA00E9DFBA /* WXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMainViewController.h; sourceTree = "<group>"; };
+		262ADD481CF5FBAA00E9DFBA /* WXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMainViewController.m; sourceTree = "<group>"; };
+		262ADD4A1CF5FCAB00E9DFBA /* WXConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WXConstants.h; path = "../WX Temp/WXConstants.h"; sourceTree = "<group>"; };
+		262ADD4B1CF6031800E9DFBA /* WXShowTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXShowTempViewController.h; sourceTree = "<group>"; };
+		262ADD4C1CF6031800E9DFBA /* WXShowTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXShowTempViewController.m; sourceTree = "<group>"; };
+		262ADD531CF6046000E9DFBA /* WXModelFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WXModelFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		262ADD551CF6046100E9DFBA /* WXModelFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXModelFramework.h; sourceTree = "<group>"; };
+		262ADD571CF6046100E9DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262ADD5C1CF6046100E9DFBA /* WXModelFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXModelFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		262ADD631CF6046100E9DFBA /* WXModelFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXModelFrameworkTests.m; sourceTree = "<group>"; };
+		262ADD651CF6046100E9DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262ADD721CF6050900E9DFBA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		262ADD731CF6050900E9DFBA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		262ADD771CF6055900E9DFBA /* WXCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCommunicationManager.h; sourceTree = "<group>"; };
+		262ADD781CF6055900E9DFBA /* WXCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCommunicationManager.m; sourceTree = "<group>"; };
+		262ADD7B1CF60CCF00E9DFBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		262ADD7D1CF60CFF00E9DFBA /* WXModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXModelManager.h; sourceTree = "<group>"; };
+		262ADD7E1CF60CFF00E9DFBA /* WXModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXModelManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		262ADD0D1CF5F00200E9DFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD681CF6046100E9DFBA /* WXModelFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD261CF5F00200E9DFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD311CF5F00200E9DFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD4F1CF6046000E9DFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD7C1CF60CCF00E9DFBA /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD591CF6046100E9DFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD5D1CF6046100E9DFBA /* WXModelFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		262ADD071CF5F00200E9DFBA = {
+			isa = PBXGroup;
+			children = (
+				262ADD7B1CF60CCF00E9DFBA /* CoreLocation.framework */,
+				262ADD121CF5F00200E9DFBA /* WX Temp */,
+				262ADD541CF6046100E9DFBA /* WXModelFramework */,
+				262ADD621CF6046100E9DFBA /* WXModelFrameworkTests */,
+				262ADD2C1CF5F00200E9DFBA /* WX TempTests */,
+				262ADD371CF5F00200E9DFBA /* WX TempUITests */,
+				262ADD111CF5F00200E9DFBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		262ADD111CF5F00200E9DFBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD101CF5F00200E9DFBA /* WX Temp.app */,
+				262ADD291CF5F00200E9DFBA /* WX TempTests.xctest */,
+				262ADD341CF5F00200E9DFBA /* WX TempUITests.xctest */,
+				262ADD531CF6046000E9DFBA /* WXModelFramework.framework */,
+				262ADD5C1CF6046100E9DFBA /* WXModelFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		262ADD121CF5F00200E9DFBA /* WX Temp */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD461CF5FB4500E9DFBA /* WX Display */,
+				262ADD161CF5F00200E9DFBA /* AppDelegate.h */,
+				262ADD171CF5F00200E9DFBA /* AppDelegate.m */,
+				262ADD1C1CF5F00200E9DFBA /* Main.storyboard */,
+				262ADD1F1CF5F00200E9DFBA /* Assets.xcassets */,
+				262ADD211CF5F00200E9DFBA /* LaunchScreen.storyboard */,
+				262ADD241CF5F00200E9DFBA /* Info.plist */,
+				262ADD131CF5F00200E9DFBA /* Supporting Files */,
+			);
+			path = "WX Temp";
+			sourceTree = "<group>";
+		};
+		262ADD131CF5F00200E9DFBA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD141CF5F00200E9DFBA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		262ADD2C1CF5F00200E9DFBA /* WX TempTests */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD2D1CF5F00200E9DFBA /* WX_TempTests.m */,
+				262ADD2F1CF5F00200E9DFBA /* Info.plist */,
+			);
+			path = "WX TempTests";
+			sourceTree = "<group>";
+		};
+		262ADD371CF5F00200E9DFBA /* WX TempUITests */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD381CF5F00200E9DFBA /* WX_TempUITests.m */,
+				262ADD3A1CF5F00200E9DFBA /* Info.plist */,
+			);
+			path = "WX TempUITests";
+			sourceTree = "<group>";
+		};
+		262ADD461CF5FB4500E9DFBA /* WX Display */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD471CF5FBAA00E9DFBA /* WXMainViewController.h */,
+				262ADD481CF5FBAA00E9DFBA /* WXMainViewController.m */,
+				262ADD4B1CF6031800E9DFBA /* WXShowTempViewController.h */,
+				262ADD4C1CF6031800E9DFBA /* WXShowTempViewController.m */,
+			);
+			name = "WX Display";
+			sourceTree = "<group>";
+		};
+		262ADD541CF6046100E9DFBA /* WXModelFramework */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD711CF604EF00E9DFBA /* Apple Reachability Class */,
+				262ADD761CF6054900E9DFBA /* Communication */,
+				262ADD551CF6046100E9DFBA /* WXModelFramework.h */,
+				262ADD4A1CF5FCAB00E9DFBA /* WXConstants.h */,
+				262ADD571CF6046100E9DFBA /* Info.plist */,
+				262ADD7D1CF60CFF00E9DFBA /* WXModelManager.h */,
+				262ADD7E1CF60CFF00E9DFBA /* WXModelManager.m */,
+			);
+			path = WXModelFramework;
+			sourceTree = "<group>";
+		};
+		262ADD621CF6046100E9DFBA /* WXModelFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD631CF6046100E9DFBA /* WXModelFrameworkTests.m */,
+				262ADD651CF6046100E9DFBA /* Info.plist */,
+			);
+			path = WXModelFrameworkTests;
+			sourceTree = "<group>";
+		};
+		262ADD711CF604EF00E9DFBA /* Apple Reachability Class */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD731CF6050900E9DFBA /* Reachability.h */,
+				262ADD721CF6050900E9DFBA /* Reachability.m */,
+			);
+			name = "Apple Reachability Class";
+			sourceTree = "<group>";
+		};
+		262ADD761CF6054900E9DFBA /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				262ADD771CF6055900E9DFBA /* WXCommunicationManager.h */,
+				262ADD781CF6055900E9DFBA /* WXCommunicationManager.m */,
+			);
+			name = Communication;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		262ADD501CF6046000E9DFBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD791CF6055900E9DFBA /* WXCommunicationManager.h in Headers */,
+				262ADD7F1CF60CFF00E9DFBA /* WXModelManager.h in Headers */,
+				262ADD561CF6046100E9DFBA /* WXModelFramework.h in Headers */,
+				262ADD751CF6050900E9DFBA /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		262ADD0F1CF5F00200E9DFBA /* WX Temp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262ADD3D1CF5F00200E9DFBA /* Build configuration list for PBXNativeTarget "WX Temp" */;
+			buildPhases = (
+				262ADD0C1CF5F00200E9DFBA /* Sources */,
+				262ADD0D1CF5F00200E9DFBA /* Frameworks */,
+				262ADD0E1CF5F00200E9DFBA /* Resources */,
+				262ADD6D1CF6046100E9DFBA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262ADD671CF6046100E9DFBA /* PBXTargetDependency */,
+			);
+			name = "WX Temp";
+			productName = "WX Temp";
+			productReference = 262ADD101CF5F00200E9DFBA /* WX Temp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		262ADD281CF5F00200E9DFBA /* WX TempTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262ADD401CF5F00200E9DFBA /* Build configuration list for PBXNativeTarget "WX TempTests" */;
+			buildPhases = (
+				262ADD251CF5F00200E9DFBA /* Sources */,
+				262ADD261CF5F00200E9DFBA /* Frameworks */,
+				262ADD271CF5F00200E9DFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262ADD2B1CF5F00200E9DFBA /* PBXTargetDependency */,
+			);
+			name = "WX TempTests";
+			productName = "WX TempTests";
+			productReference = 262ADD291CF5F00200E9DFBA /* WX TempTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		262ADD331CF5F00200E9DFBA /* WX TempUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262ADD431CF5F00200E9DFBA /* Build configuration list for PBXNativeTarget "WX TempUITests" */;
+			buildPhases = (
+				262ADD301CF5F00200E9DFBA /* Sources */,
+				262ADD311CF5F00200E9DFBA /* Frameworks */,
+				262ADD321CF5F00200E9DFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262ADD361CF5F00200E9DFBA /* PBXTargetDependency */,
+			);
+			name = "WX TempUITests";
+			productName = "WX TempUITests";
+			productReference = 262ADD341CF5F00200E9DFBA /* WX TempUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		262ADD521CF6046000E9DFBA /* WXModelFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262ADD6A1CF6046100E9DFBA /* Build configuration list for PBXNativeTarget "WXModelFramework" */;
+			buildPhases = (
+				262ADD4E1CF6046000E9DFBA /* Sources */,
+				262ADD4F1CF6046000E9DFBA /* Frameworks */,
+				262ADD501CF6046000E9DFBA /* Headers */,
+				262ADD511CF6046000E9DFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WXModelFramework;
+			productName = WXModelFramework;
+			productReference = 262ADD531CF6046000E9DFBA /* WXModelFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		262ADD5B1CF6046100E9DFBA /* WXModelFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262ADD6E1CF6046100E9DFBA /* Build configuration list for PBXNativeTarget "WXModelFrameworkTests" */;
+			buildPhases = (
+				262ADD581CF6046100E9DFBA /* Sources */,
+				262ADD591CF6046100E9DFBA /* Frameworks */,
+				262ADD5A1CF6046100E9DFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262ADD5F1CF6046100E9DFBA /* PBXTargetDependency */,
+				262ADD611CF6046100E9DFBA /* PBXTargetDependency */,
+			);
+			name = WXModelFrameworkTests;
+			productName = WXModelFrameworkTests;
+			productReference = 262ADD5C1CF6046100E9DFBA /* WXModelFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		262ADD081CF5F00200E9DFBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Relative Logic, Inc";
+				TargetAttributes = {
+					262ADD0F1CF5F00200E9DFBA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					262ADD281CF5F00200E9DFBA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 262ADD0F1CF5F00200E9DFBA;
+					};
+					262ADD331CF5F00200E9DFBA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 262ADD0F1CF5F00200E9DFBA;
+					};
+					262ADD521CF6046000E9DFBA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					262ADD5B1CF6046100E9DFBA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 262ADD0F1CF5F00200E9DFBA;
+					};
+				};
+			};
+			buildConfigurationList = 262ADD0B1CF5F00200E9DFBA /* Build configuration list for PBXProject "WX Temp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 262ADD071CF5F00200E9DFBA;
+			productRefGroup = 262ADD111CF5F00200E9DFBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				262ADD0F1CF5F00200E9DFBA /* WX Temp */,
+				262ADD281CF5F00200E9DFBA /* WX TempTests */,
+				262ADD331CF5F00200E9DFBA /* WX TempUITests */,
+				262ADD521CF6046000E9DFBA /* WXModelFramework */,
+				262ADD5B1CF6046100E9DFBA /* WXModelFrameworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		262ADD0E1CF5F00200E9DFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD231CF5F00200E9DFBA /* LaunchScreen.storyboard in Resources */,
+				262ADD201CF5F00200E9DFBA /* Assets.xcassets in Resources */,
+				262ADD1E1CF5F00200E9DFBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD271CF5F00200E9DFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD321CF5F00200E9DFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD511CF6046000E9DFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD5A1CF6046100E9DFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		262ADD0C1CF5F00200E9DFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD181CF5F00200E9DFBA /* AppDelegate.m in Sources */,
+				262ADD151CF5F00200E9DFBA /* main.m in Sources */,
+				262ADD4D1CF6031800E9DFBA /* WXShowTempViewController.m in Sources */,
+				262ADD491CF5FBAA00E9DFBA /* WXMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD251CF5F00200E9DFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD2E1CF5F00200E9DFBA /* WX_TempTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD301CF5F00200E9DFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD391CF5F00200E9DFBA /* WX_TempUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD4E1CF6046000E9DFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD741CF6050900E9DFBA /* Reachability.m in Sources */,
+				262ADD801CF60CFF00E9DFBA /* WXModelManager.m in Sources */,
+				262ADD7A1CF6055900E9DFBA /* WXCommunicationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262ADD581CF6046100E9DFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262ADD641CF6046100E9DFBA /* WXModelFrameworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		262ADD2B1CF5F00200E9DFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262ADD0F1CF5F00200E9DFBA /* WX Temp */;
+			targetProxy = 262ADD2A1CF5F00200E9DFBA /* PBXContainerItemProxy */;
+		};
+		262ADD361CF5F00200E9DFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262ADD0F1CF5F00200E9DFBA /* WX Temp */;
+			targetProxy = 262ADD351CF5F00200E9DFBA /* PBXContainerItemProxy */;
+		};
+		262ADD5F1CF6046100E9DFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262ADD521CF6046000E9DFBA /* WXModelFramework */;
+			targetProxy = 262ADD5E1CF6046100E9DFBA /* PBXContainerItemProxy */;
+		};
+		262ADD611CF6046100E9DFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262ADD0F1CF5F00200E9DFBA /* WX Temp */;
+			targetProxy = 262ADD601CF6046100E9DFBA /* PBXContainerItemProxy */;
+		};
+		262ADD671CF6046100E9DFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262ADD521CF6046000E9DFBA /* WXModelFramework */;
+			targetProxy = 262ADD661CF6046100E9DFBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		262ADD1C1CF5F00200E9DFBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				262ADD1D1CF5F00200E9DFBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		262ADD211CF5F00200E9DFBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				262ADD221CF5F00200E9DFBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		262ADD3B1CF5F00200E9DFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		262ADD3C1CF5F00200E9DFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		262ADD3E1CF5F00200E9DFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "WX Temp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.relativelogicinc.WX-Temp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		262ADD3F1CF5F00200E9DFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "WX Temp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.relativelogicinc.WX-Temp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		262ADD411CF5F00200E9DFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "WX TempTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.relativelogicinc.WX-TempTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WX Temp.app/WX Temp";
+			};
+			name = Debug;
+		};
+		262ADD421CF5F00200E9DFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "WX TempTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.relativelogicinc.WX-TempTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WX Temp.app/WX Temp";
+			};
+			name = Release;
+		};
+		262ADD441CF5F00200E9DFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "WX TempUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.relativelogicinc.WX-TempUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "WX Temp";
+			};
+			name = Debug;
+		};
+		262ADD451CF5F00200E9DFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "WX TempUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.relativelogicinc.WX-TempUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "WX Temp";
+			};
+			name = Release;
+		};
+		262ADD6B1CF6046100E9DFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WXModelFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.relativelogicinc.WXModelFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		262ADD6C1CF6046100E9DFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WXModelFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.relativelogicinc.WXModelFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		262ADD6F1CF6046100E9DFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WXModelFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.relativelogicinc.WXModelFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WX Temp.app/WX Temp";
+			};
+			name = Debug;
+		};
+		262ADD701CF6046100E9DFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WXModelFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.relativelogicinc.WXModelFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WX Temp.app/WX Temp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		262ADD0B1CF5F00200E9DFBA /* Build configuration list for PBXProject "WX Temp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262ADD3B1CF5F00200E9DFBA /* Debug */,
+				262ADD3C1CF5F00200E9DFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		262ADD3D1CF5F00200E9DFBA /* Build configuration list for PBXNativeTarget "WX Temp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262ADD3E1CF5F00200E9DFBA /* Debug */,
+				262ADD3F1CF5F00200E9DFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		262ADD401CF5F00200E9DFBA /* Build configuration list for PBXNativeTarget "WX TempTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262ADD411CF5F00200E9DFBA /* Debug */,
+				262ADD421CF5F00200E9DFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		262ADD431CF5F00200E9DFBA /* Build configuration list for PBXNativeTarget "WX TempUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262ADD441CF5F00200E9DFBA /* Debug */,
+				262ADD451CF5F00200E9DFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		262ADD6A1CF6046100E9DFBA /* Build configuration list for PBXNativeTarget "WXModelFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262ADD6B1CF6046100E9DFBA /* Debug */,
+				262ADD6C1CF6046100E9DFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		262ADD6E1CF6046100E9DFBA /* Build configuration list for PBXNativeTarget "WXModelFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262ADD6F1CF6046100E9DFBA /* Debug */,
+				262ADD701CF6046100E9DFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 262ADD081CF5F00200E9DFBA /* Project object */;
+}
