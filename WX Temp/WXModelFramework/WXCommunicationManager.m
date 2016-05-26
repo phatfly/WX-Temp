@@ -9,14 +9,13 @@
 #include <mach/mach_time.h>
 #import <sys/utsname.h>
 #import "WXConstants.h"
-
+#import <UIKit/UIKit.h>
 
 static WXCommunicationManager *sharedCommManager = nil;
 
-@interface WXCommunicationManager()
+@interface WXCommunicationManager() <NSURLSessionDelegate, NSURLSessionTaskDelegate>
 
 @property (nonatomic, strong) NSURLSession *backgroundSession;
-@property (nonatomic, strong) NSURLSessionDownloadTask *download;
 @property (nonatomic, strong) NSURLSessionConfiguration *backgroundConfigurationObject;
 
 @property (nonatomic, getter = isWifiReachable) BOOL wifiReachable;
@@ -28,12 +27,15 @@ static WXCommunicationManager *sharedCommManager = nil;
 
 @property (nonatomic, strong) NSTimer *serverAvailabilityTimer;
 
+@property (nonatomic, strong) Reachability *reachability;
+@property (nonatomic) BOOL isOfflineMode;
+
 @end
 
 
 @implementation WXCommunicationManager
 
-@synthesize prefs, reachability, isOfflineMode, wwanReachable, wifiReachable, backgroundSession, download, backgroundConfigurationObject, serverFirstConnected, serverAvailabilityTimer;
+@synthesize prefs, reachability, isOfflineMode, wwanReachable, wifiReachable, backgroundSession, backgroundConfigurationObject, serverFirstConnected, serverAvailabilityTimer;
 
 
 #pragma mark Singleton Methods
@@ -257,10 +259,10 @@ static WXCommunicationManager *sharedCommManager = nil;
 
 -(BOOL)isReachability
 {
-    return [WXCommunicationManager configuredReachability];
+    return [self configuredReachability];
 }
 
-+(BOOL)configuredReachability
+-(BOOL)configuredReachability
 {
 
     if ([[WXCommunicationManager sharedManager] isWwanReachable] || [[WXCommunicationManager sharedManager] isWifiReachable])
@@ -275,7 +277,7 @@ static WXCommunicationManager *sharedCommManager = nil;
 - (BOOL)isOnlineMode
 {
     //    DebugLogWX(@"");
-    return (!isOfflineMode && [WXCommunicationManager configuredReachability]);
+    return (!isOfflineMode && [self configuredReachability]);
     //    return isOfflineMode;
 }
 
@@ -378,11 +380,13 @@ static WXCommunicationManager *sharedCommManager = nil;
     [request setHTTPMethod:@"GET"];
     [request setValue:@"application/json-rpc" forHTTPHeaderField:@"Content-Type"];
 
-    if([WXCommunicationManager configuredReachability])
+    if([self configuredReachability])
     {
 
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         NSURLSessionDataTask *task = [backgroundSession dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response, NSError *error) {
         
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             if (error) {
                 DebugLogWX(@"\n error ------ %@", [error localizedDescription]);
                 completionHandler(NO, @{@"error":[error localizedDescription]},error);
@@ -392,7 +396,7 @@ static WXCommunicationManager *sharedCommManager = nil;
             {
                 
                 NSError *localError = nil;
-                NSMutableDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&localError];
+                NSMutableDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingAllowFragments error:&localError];
                 
                 if (localError != nil)
                 {

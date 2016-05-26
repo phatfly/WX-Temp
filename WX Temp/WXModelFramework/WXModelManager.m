@@ -50,7 +50,7 @@ NSString *const kWXSDKNetworkReachabilityChanged = @"com.relativelogicinc.SDK.kW
     if (self) {
         DebugLogWX(@"SDK started");
         
-        [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(networkAvailabilityChanged:) name:kWXSDKNetworkReachabilityChanged object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(networkAvailabilityChanged:) name:kWXSDKReachabilityChanged object:nil];
         
         [WXCommunicationManager sharedManager];
         

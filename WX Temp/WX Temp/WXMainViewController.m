@@ -20,11 +20,13 @@
 @property (strong, nonatomic) __block NSDictionary *passingLocationDict;
 @property (strong, nonatomic) __block IBOutlet UIView *activityIndicatorContainerView;
 @property (strong, nonatomic) __block IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (strong, nonatomic) IBOutlet UILabel *activityIndicatorViewLabel;
 @end
 
 @implementation WXMainViewController
 
-@synthesize scrollView, navTitle, zipcodeTextField, submitButton, passingLocationDict, activityIndicatorContainerView, activityIndicator;
+@synthesize scrollView, navTitle, zipcodeTextField, submitButton, passingLocationDict, activityIndicatorContainerView, activityIndicator, activityIndicatorViewLabel;
 
 - (void)viewDidLoad
 {
@@ -42,7 +44,10 @@
     
     [self setKeyboardToolbar];
     
-     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(networkAvailabilityChanged:) name:kWXSDKNetworkReachabilityChanged object:nil];
+     [[NSNotificationCenter defaultCenter] addObserver: self
+                                              selector: @selector(networkAvailabilityChanged:)
+                                                  name:kWXSDKNetworkReachabilityChanged object:nil];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification object:nil];
@@ -51,7 +56,11 @@
                                              selector:@selector(keyboardWillBeHidden:)
                                                  name:UIKeyboardWillHideNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textDidChange:)
+                                                 name:UITextFieldTextDidChangeNotification object:nil];
+    
+    [self networkAvailabilityChanged:nil];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -65,7 +74,13 @@
 {
     if([[WXModelManager sharedManager] networkAvailable])
     {
-        
+        NSLog(@"Network Available");
+        [self hideActivityView];
+    }
+    else
+    {
+        NSLog(@"Network NOT Available");
+        [self showActivityViewWithMessage:@"Offline! \n Waiting for a network connection."];
     }
 }
 
@@ -75,13 +90,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - button methods
+
 - (IBAction)usLocationButtonPressed:(id)sender {
     
-    dispatch_async(dispatch_get_main_queue(), ^(){
-        
-        activityIndicatorContainerView.hidden = NO;
-        [activityIndicator startAnimating];
-    });
+     [self showActivityViewWithMessage:nil];
     
     [[WXModelManager sharedManager] getConditionWithLocationServicesWithCompletion:^(BOOL success, NSDictionary *conditionResponseDict, NSError *localError) {
        
@@ -98,11 +111,7 @@
             [self locationServicesOfflineAlert];
         }
         
-        dispatch_async(dispatch_get_main_queue(), ^(){
-            
-            activityIndicatorContainerView.hidden = YES;
-            [activityIndicator stopAnimating];
-        });
+        [self hideActivityView];
         
     }];
 }
@@ -110,11 +119,7 @@
 
 - (IBAction)submitButtonPressed:(id)sender {
     
-    dispatch_async(dispatch_get_main_queue(), ^(){
-        
-        activityIndicatorContainerView.hidden = NO;
-        [activityIndicator startAnimating];
-    });
+    [self showActivityViewWithMessage:nil];
     
     [[WXModelManager sharedManager] getConditionWithQuery:zipcodeTextField.text completion:^(BOOL success, NSDictionary *conditionResponseDict, NSError *localError) {
         if (success)
@@ -127,11 +132,7 @@
             NSLog(@"localError: %@", [localError localizedDescription]);
         }
         
-        dispatch_async(dispatch_get_main_queue(), ^(){
-            
-            activityIndicatorContainerView.hidden = YES;
-            [activityIndicator stopAnimating];
-        });
+        [self hideActivityView];
     }];
 }
 
@@ -151,6 +152,7 @@
     }
 }
 
+#pragma mark - Alert Methods
 
 -(void)networkofflineAlert
 {
@@ -193,6 +195,8 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+#pragma mark - keyboard toolbar setup
 
 -(void)setKeyboardToolbar
 {
@@ -251,22 +255,7 @@
         [zipcodeTextField resignFirstResponder];
 }
 
-
-- (IBAction)textFieldDidBeginEditing:(UITextField *)sender
-{
-    if(zipcodeTextField.text.length > 0)
-        submitButton.enabled = YES;
-    else
-        submitButton.enabled = NO;
-}
-
-- (IBAction)textFieldDidEndEditing:(UITextField *)sender
-{
-    if(zipcodeTextField.text.length > 0)
-        submitButton.enabled = YES;
-    else
-        submitButton.enabled = NO;
-}
+#pragma mark - textField Methods
 
 -(void)textDidChange:(NSNotification *)notification
 {
@@ -277,4 +266,43 @@
         submitButton.enabled = NO;
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if(zipcodeTextField.text.length > 0)
+    {
+        [self doneTyping];
+        [self submitButtonPressed:nil];
+    }
+    return YES;
+}
+
+#pragma mark - Activity View Methods
+
+
+-(void)showActivityViewWithMessage:(NSString*)msgString
+{
+    dispatch_async(dispatch_get_main_queue(), ^(){
+        
+        if(msgString)
+            activityIndicatorViewLabel.text = msgString;
+        else
+            activityIndicatorViewLabel.text = @"Please wait";
+        
+        activityIndicatorContainerView.hidden = NO;
+        [activityIndicator startAnimating];
+    });
+    
+}
+
+-(void)hideActivityView
+{
+    dispatch_async(dispatch_get_main_queue(), ^(){
+        
+        activityIndicatorContainerView.hidden = YES;
+        [activityIndicator stopAnimating];
+    });
+    
+}
+
 @end
