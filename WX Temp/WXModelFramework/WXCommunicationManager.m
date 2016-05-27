@@ -4,10 +4,6 @@
 
 #import "WXCommunicationManager.h"
 
-#include <stdlib.h>
-#import <objc/runtime.h>
-#include <mach/mach_time.h>
-#import <sys/utsname.h>
 #import "WXConstants.h"
 #import <UIKit/UIKit.h>
 

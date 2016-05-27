@@ -1,10 +1,7 @@
 //
 //  WXModelManager.h
-//  WX Temp
-//
-//  Created by Christopher Scott on 5/25/16.
-//  Copyright © 2016 Relative Logic, Inc. All rights reserved.
-//
+//  
+
 
 #import <Foundation/Foundation.h>
 
@@ -21,7 +18,7 @@ extern NSString *const kWXSDKNetworkReachabilityChanged;
 
 /**
  *  Call [WXModelManager sharedManger] as soon as you would like to setup the SDK.
- *  This method will init the this singleton and the other SDK dependent object instances necessary for use.
+ *  This method will init this singleton and the other SDK dependent object instances necessary for use.
  */
 + (id)sharedManager;
 
