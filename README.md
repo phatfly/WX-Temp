@@ -11,6 +11,11 @@ Additional features in the app:
 
 This is a demo app and NOT a finished product!
 
+Please Note:
+	I am not maintaining this code or adding to it beyond what has been already accomplished.  
+
+	I am not maintaining the WeatherUnderground account, either, and won't be checking if it still active.  
+
 
 # Coding Challenge
 
