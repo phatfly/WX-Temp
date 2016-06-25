@@ -1,6 +1,8 @@
 # WX-Temp
 
-This demo app is a coding challenge I made in less than eight hours for a possible employer.  At the time I didn't have more time to work on it and I had accomplished the basic requirement so I stopped.  There are still aspects of the code that can be cleaned up and commented.  This code is really a show case of how I am currently setting up my workspaces and insight to how I have been separating the model into an embedded framework.  This demo app is a basic app that accomplishes the code challenge requirements.
+This demo app is a coding challenge I made in less than eight hours for a possible employer.  The week I was asked to accomplish this task I didn't have more time to work on it, but I had accomplished the basic requirement, so I stopped.  There are still aspects of the code that can be cleaned up and commented on.  This code is really a show case of how I am currently setting up my workspaces and insight to how I have been separating the model into a framework.  
+
+This demo app is a basic app that accomplishes the code challenge requirements.
 
 
 # Coding Challenge
