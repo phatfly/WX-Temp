@@ -14,7 +14,7 @@ This is a demo app and NOT a finished product!
 
 * I am not maintaining this code or adding to it beyond what has been already accomplished.  
 
-* I am not maintaining the WeatherUnderground account, either, and won't be checking if it still active.  
+* I am not maintaining the WeatherUnderground account, either, and won't be checking if it's still active.  
 
 
 # Coding Challenge
