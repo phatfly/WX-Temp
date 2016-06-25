@@ -1,22 +1,5 @@
 # WX-Temp
 
-This demo app is a coding challenge I made in less than eight hours for an interview.  The week I was asked to accomplish this task I didn't have more time to work on it, but I had accomplished the requirements, plus some extra.  There are still aspects of the code that can be cleaned up and commented on.  This code is really a show case of how I am currently setting up my workspaces and insight to how I have been separating the model into a framework.  
-
-Additional features in the app:
-
-* I included a communication manager (singleton) that implements Apple's Reachability code to determine if a network connection is available.  The app will display a layover (popup) view warning that the device is offline and is waiting for a network connection. 
-* I included a UITextField to allow a user to input a zip-code (airport identifier like KMSP or any other accepted WXUnderground API input) to get that locations temp.
-
-
-This is a demo app and NOT a finished product!
-
-#### Please Note:
-
-* I am not maintaining this code or adding to it beyond what has been already accomplished.  
-
-* I am not maintaining the WeatherUnderground account, either, and won't be checking if it's still active.  
-
-
 # Coding Challenge
 
 Requirements: 
@@ -40,3 +23,27 @@ In this code challenge we will be paying particular attention to the following i
 	
 	
 When you have finished please create an account on GitHub (if you don’t have one already) and provide a link to the project. 
+
+
+# Notes
+
+* Language: Objective-C
+
+This demo app is a coding challenge I made in six hours for an interview.  This code is really a show case of how I am currently setting up my workspaces and insight to how I have been separating the model into a framework.  
+
+
+Additional features in the app:
+
+* Network checking and warning. 
+* UITextField to allow a user to input a zip-code (airport identifier like KMSP or any other accepted WXUnderground API input) to get that locations temp.
+
+
+This is a demo app and NOT a finished product!
+
+#### Please Note:
+
+* I am not maintaining this code or adding to it beyond what has been already accomplished.  
+
+* I am not maintaining the WeatherUnderground account, either, and won't be checking if it's still active.  
+
+
