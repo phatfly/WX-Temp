@@ -6,6 +6,7 @@ This demo app is a coding challenge I made in less than eight hours for a possib
 Coding Challenge
 
 Requirements: 
+
 Support iOS 8 + 
 iPhone only (no need to support iPad)
 Support Portrait and Landscape orientations 
@@ -19,4 +20,6 @@ In this code challenge we will be paying particular attention to the following i
 	● Architecture: How do you structure your application and its classes? Would the application be  extensible? How do you encapsulate data parsing and access?  
 	● Coding practices and use of IDE: How do you organize your files and groups? What practices do you  adhere to make the code accessible and usable to other developers? 
 	● Fit and finish: Do you adhere to the platform’s recommended practices? 
+	
+	
 When you have finished please create an account on GitHub (if you don’t have one already) and provide a link to the project. 
